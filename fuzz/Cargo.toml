@@ -1,0 +1,30 @@
+[package]
+name = "FuzzyRusty-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+arbitrary = { version = "1.4.1", features = ["derive"] }
+libfuzzer-sys = { version = "0.4" }
+ssz_rs = "0.9.0"
+
+[dependencies.FuzzyRusty]
+path = ".."
+
+[[bin]]
+name = "merkleization"
+path = "fuzz_targets/merkleization.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "basic_roundtrip"
+path = "fuzz_targets/basic_roundtrip.rs"
+test = false
+doc = false
+bench = false
