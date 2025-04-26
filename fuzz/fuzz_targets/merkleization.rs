@@ -16,7 +16,7 @@ struct FuzzInput {
 
 fuzz_target!(|data: &[u8]| {
     if let Ok(input) = Unstructured::new(data).arbitrary::<FuzzInput>() {
-        let mut depth = input.branch.len();
+        let depth = input.branch.len();
         let index = if depth > 0 { input.index % depth } else { 0 };
 
         ///////// MANDATORY CHECKS //////////
