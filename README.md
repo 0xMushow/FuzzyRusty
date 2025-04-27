@@ -41,3 +41,4 @@ You'll find the coverage report in the generated repository in the HTML format
 - There is also LibAFL & AFL++ (maintained by SR Labs)
 - There is also [Ziggy](https://github.com/srlabs/ziggy) (maintained by SR Labs too)
 - I looked up this oss-fuzz [list](https://physics.bu.edu/~alxndr/oss-fuzz-corpus.html), but didn't find relevant corpora to use
+  - Next: Explore this for better corpora https://github.com/ethereum/consensus-specs/tree/dev/tests/generators/ssz_generic
