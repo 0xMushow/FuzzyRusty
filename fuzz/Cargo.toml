@@ -11,6 +11,7 @@ cargo-fuzz = true
 arbitrary = { version = "1.4.1", features = ["derive"] }
 libfuzzer-sys = { version = "0.4" }
 ssz_rs = "0.9.0"
+rand = "0.9.1"
 
 [dependencies.FuzzyRusty]
 path = ".."
@@ -32,6 +33,13 @@ bench = false
 [[bin]]
 name = "roundtrip_mutator"
 path = "fuzz_targets/roundtrip_mutator.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "simple_node_mutator"
+path = "fuzz_targets/simple_node_mutator.rs"
 test = false
 doc = false
 bench = false
