@@ -28,3 +28,10 @@ path = "fuzz_targets/basic_roundtrip.rs"
 test = false
 doc = false
 bench = false
+
+[[bin]]
+name = "roundtrip_mutator"
+path = "fuzz_targets/roundtrip_mutator.rs"
+test = false
+doc = false
+bench = false
